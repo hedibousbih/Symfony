@@ -1,0 +1,24 @@
+<table border=1>
+<tr>
+<th>nsc</th>
+<th>email</th>
+<th>name classroom</th>
+
+
+
+</tr>
+{% for s in ss  %}
+ <tr>
+ <th>{{ s.nsc }}</th>
+<th>{{ s.email }}</th>
+<th>{{ s.classroom.name }}</th>
+
+
+ 
+
+ 
+  </th>
+ </tr>
+ {% endfor %}
+
+</table>

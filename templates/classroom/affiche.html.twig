@@ -1,10 +1,23 @@
- <table>
-{% for c in cc %}
+<table border=1>
+<tr>
+<th>id</th>
+<th>name</th>
+<th>descrip</th>
 
+
+</tr>
+{% for c in cc  %}
  <tr>
- <td>aaaa{{c.id}}</th>
-<td>aa{{ cc.name}}</th>
+ <th>{{ c.id }}</th>
+ <th>{{ c.name }}</th>
+ <th>{{ c.description }}</th>
+ <th><a href="{{ path('app_detail',{'id': c.id})}}">detail</a></th>
+ <th><a href="{{path('del',{'id': c.id})}}">supprimer</a></th>
+ 
 
+ 
+  </th>
  </tr>
  {% endfor %}
-  </table>
+
+</table>
