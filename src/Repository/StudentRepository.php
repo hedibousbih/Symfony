@@ -63,4 +63,14 @@ class StudentRepository extends ServiceEntityRepository
 //            ->getOneOrNullResult()
 //        ;
 //    }
+function searchEmail ($mail){
+    $req=$this->createQueryBuilder('s')
+    ->Where('s.email LIKE :e')
+    ->setParameter('e', '%'.$mail.'%');
+    //->setMaxResults(1)
+    return $req->getQuery()->getResult();
+
+
+
+}
 }

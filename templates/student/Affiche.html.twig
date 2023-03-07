@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 <table border=1>
 <tr>
 <th>nsc</th>
@@ -22,3 +23,37 @@
  {% endfor %}
 
 </table>
+=======
+<h1>Affichage</h1>
+<form method ="" action= "{{path('search')}}">
+<label>Email</label>
+<input type="text" name="e">
+<input type="submit" value="search">
+</form>
+<table border=1>
+    <tr>
+        <th>nsc</th>
+        <th>classroom_id</th>
+        <th>email</th>
+        <th>update</th>
+        <th>delete</th>
+   
+    </tr>
+    {% for f in cc %}
+        <tr>
+            <td>{{ f.nsc}}</td>
+            <td>{{ f.classroom.name }}</td>
+            <td>{{ f.email }}</td>
+            <td> <a href="{{path('modifier',{'nsc':f.nsc})}}">update</a></td>
+              <td> <a href="{{path('delete',{'nsc':f.nsc})}}">Delete</a></td>
+       
+
+        </tr>
+    {% endfor %}
+    
+</table>
+    <a href="{{ path('ajouter')}}"> ajouter </a>
+
+
+
+>>>>>>> Stashed changes

@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 <table border=1>
 <tr>
 <th>id</th>
@@ -21,3 +22,32 @@
  {% endfor %}
 
 </table>
+=======
+<h1>Affichage</h1>
+<table border=1>
+    <tr>
+        <th>id</th>
+        <th>name</th>
+        <th>Description</th>
+                <th>Detail</th>
+                                <th>Supprimer</th>
+                                                                <th>Modifier</th>
+
+
+    </tr>
+    {% for f in cc %}
+        <tr>
+            <td>{{ f.id }}</td>
+            <td>{{ f.name }}</td>
+            <td>{{ f.description }}</td>
+            <td><a href="{{ path('app_detail', {'id': f.id})}}"> Detail </a></td>
+            <td><a href="{{ path('del', {'id': f.id})}}"> Supprimer </a></td>
+         <td><a href="{{ path('modifier', {'id': f.id})}}"> Modifier </a></td>
+
+        </tr>
+    {% endfor %}
+
+</table>
+
+
+>>>>>>> Stashed changes

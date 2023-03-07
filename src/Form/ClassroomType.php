@@ -7,8 +7,11 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
+<<<<<<< Updated upstream
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 
+=======
+>>>>>>> Stashed changes
 
 class ClassroomType extends AbstractType
 {

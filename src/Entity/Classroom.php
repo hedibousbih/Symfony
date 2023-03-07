@@ -45,8 +45,7 @@ class Classroom
 
         return $this;
     }
-
-    public function getDescription(): ?string
+public function getDescription(): ?string
     {
         return $this->description;
     }
@@ -57,7 +56,6 @@ class Classroom
 
         return $this;
     }
-
     /**
      * @return Collection<int, Student>
      */

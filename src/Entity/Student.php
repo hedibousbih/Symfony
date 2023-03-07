@@ -16,13 +16,13 @@ class Student
     private ?string $email = null;
 
     #[ORM\ManyToOne(inversedBy: 'students')]
-    private ?classroom $classroom = null;
+    private ?Classroom $classroom = null;
 
     public function getNSC(): ?int
     {
         return $this->nsc;
     }
-    public function setNSC(string $nsc): self
+    public function setNSC(int $nsc): self
     {
         $this->nsc = $nsc;
 
@@ -41,12 +41,12 @@ class Student
         return $this;
     }
 
-    public function getClassroom(): ?classroom
+    public function getClassroom(): ?Classroom
     {
         return $this->classroom;
     }
 
-    public function setClassroom(?classroom $classroom): self
+    public function setClassroom(?Classroom $classroom): self
     {
         $this->classroom = $classroom;
 
